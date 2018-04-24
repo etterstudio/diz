@@ -22,30 +22,87 @@ All rights reserved.
 		url('fonts/EtterCI-Medium.svg#CircularStdMediumRegular') format('svg');
 }
 
-@font-face {
-	font-family: 'roboto';
-	src: url('fonts/roboto/RobotoMono-Thin.ttf') format('truetype');
-}
-
  
 body, html {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100%;
-	font-size: 15px;
-	font-family: roboto, monospace;
-/*	font-family: etter-book, sans-serif; */
+	font-size: 16px;
+	font-family: etter-book, sans-serif; 
 	color: #fff;
+	background-color: #fff;
+}
+
+#container {
+	position:absolute; 
+	width:100%
+}
+
+.content  {
+	position:relative;
+	margin: auto;
+	max-width: 600px;
+	padding: 24px;
+	transition: 0.6s;
+}
+
+.image  {
+	position:relative;
+	margin: auto;
+	max-width: 600px;
+	margin-bottom:64px;
 	background-color: #000;
+}
+
+.image img  {
+	z-index: 2;
+	position:absolute;
+	width:100%;
+	transition: 1.2s;
+    cursor: pointer; 
+}
+
+.image img:hover {
+	opacity: 0.2;
+}
+
+.txtTitle {
+	font-family:etter-medium;
+	letter-spacing:-0.25px;
+	font-size:32px;
+	padding-bottom:12px;
+}
+
+.txtRegular {
+	font-family:etter-medium;
+	letter-spacing:0px;
+	font-size:32px;
+	padding-bottom:64px;
+}
+
+.txtSmall {
+	font-family:etter-book;
+	letter-spacing:0px;
+	font-size:24px;
+	padding-bottom:36px;
+}
+
+.txtCaption {
+	position:absolute;
+	font-family:etter-book;
+	letter-spacing:0px;
+	font-size:20px;
+	padding:48px;
 }
 
 .button  {
 	float:right;
 	border:2px solid #fff;
-    padding: 8px;
-    margin-right: 12px;
-    margin-top: 12px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
     cursor: pointer; 
 	transition: 0.6s;
 	display: inline-block;
@@ -56,4 +113,52 @@ body, html {
 
 .button:hover {
 	background:#000;
+}
+
+.txtBlack {
+	color:#000;
+}
+
+.txtGrey {
+	color:#999;
+}
+
+.txtWhite {
+	color:#fff;
+}
+
+.talk {
+    display:none;
+}
+
+.default {
+    display:block;
+}
+
+@media only screen and (max-width:800px) {
+
+	.txtTitle {
+		letter-spacing:-0.25px;
+		font-size:20px;
+		padding-bottom:12px;
+	}
+	
+	.txtRegular {
+		letter-spacing:0px;
+		font-size:20px;
+		padding-bottom:64px;
+	}
+
+	.txtSmall {
+		letter-spacing:0px;
+		font-size:14px;
+		padding-bottom:36px;
+	}
+
+	.txtCaption {
+		letter-spacing:0px;
+		font-size:18px;
+		padding:24px;
+	}
+
 }
