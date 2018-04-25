@@ -30,6 +30,7 @@ body, html {
 	height: 100%;
 	font-size: 16px;
 	font-family: etter-book, sans-serif; 
+	background-image: url('../img/grid.gif'), url("../img/grid2.gif"), url("../img/grid3.gif"), url("../img/grid4.gif");
 	color: #fff;
 	background-color: #fff;
 }

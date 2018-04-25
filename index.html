@@ -16,16 +16,30 @@
 
 
 	<body>
-
+		
 		<div id="container">
 			<div class="content">
 
 				<div class="txtTitle txtBlack">
 					<div class="talk en default">
 						Digital Icon Zurich is a orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						<p>
 					</div>
 					<div class="talk de">
 						Digital Icon Zurich is a orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						<p>
+					</div>
+				</div>
+				
+				<div class="image">
+					<img src="img/hello.gif">
+					<div class="txtCaption txtWhite">
+						<div class="talk en default">
+							Hello World!
+						</div>
+						<div class="talk de">
+							Hello World!
+						</div>
 					</div>
 				</div>
 
@@ -177,13 +191,14 @@ var unit = 80;
 
 createDivs({shape:"rect", type:"css", y:(-unit/2), width:doc.width, height:(doc.height-unit), color:"#1f3a94", parent:"mother", id:"hero"});
 
+
 document.getElementById("container").style.paddingTop = (doc.height-unit) + "px";
 
 
 //size image containers
 var pictures = document.getElementsByClassName("image");
 for (var i = 0; i < pictures.length; i++) {
-    pictures[i].style.height = pictures[i].children[0].height;
+    pictures[i].style.height = pictures[i].children[0].height-1;
 } 
 
 
