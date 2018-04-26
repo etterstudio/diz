@@ -1,2 +1,0 @@
-# diz
-Digital Icon Zurich
