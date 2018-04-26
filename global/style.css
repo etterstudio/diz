@@ -132,14 +132,6 @@ body, html {
 	color:#f00;
 }
 
-.talk {
-    display:none;
-}
-
-.default {
-    display:block;
-}
-
 a {
 	text-decoration:none;
 }
