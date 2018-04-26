@@ -24,7 +24,7 @@ All rights reserved.
 
 @font-face {
 	font-family: 'roboto';
-	src: url('fonts/roboto/RobotoMono-Light.ttf') format('truetype');
+	src: url('fonts/roboto/RobotoMono-Bold.ttf') format('truetype');
 }
  
 body, html {
@@ -82,7 +82,7 @@ body, html {
 .txtHero {
 	font-family:roboto;
 	letter-spacing:5px;
-	font-size:36px;
+	font-size:120px;
 }
 
 .txtTitle {
@@ -146,7 +146,7 @@ body, html {
 }
 
 .txtColor {
-	color:#f00;
+	color:#f51000;
 }
 
 a {
@@ -157,7 +157,7 @@ a {
 
 	.txtHero {
 		letter-spacing:-0.25px;
-		font-size:36px;
+		font-size:80px;
 	}
 	
 	.txtTitle {
