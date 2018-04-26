@@ -31,12 +31,15 @@
 					
 					<a name="agenda"></a>
 	
-					<div class="txtSmall txtBlack babel" style="background-color: #ccc">
+					<div class="txtSmall txtBlack babel" style="background-color: #ccc; padding:24px">
 						<en>
-							Agenda<br>
-							— May 21, 2018, Museum of Digital Art Zurich, 4 – 6 pm: Introduction, first public discussion, snacks<br>
-							— Jun 11, 2018, Museum of Digital Art Zurich: Second public discussion, snacks<br>
-							— Jul 13, 2018, Museum of Digital Art Zurich: Presentation final concept, snacks
+							Meet-up:<br>
+							— <br>
+							May 21, 2018, Museum of Digital Art Zurich, 4 – 6 pm: Introduction, first public discussion, snacks<br>
+							— <br>
+							Jun 11, 2018, Museum of Digital Art Zurich: Second public discussion, snacks<br>
+							— <br>
+							Jul 13, 2018, Museum of Digital Art Zurich: Presentation final concept, snacks
 						</en>
 						<de>
 							Treffen<br>
@@ -48,18 +51,6 @@
 	
 					<div class="txtTitle txtBlack">
 						&nbsp;
-					</div>
-				
-					<div class="image">
-						<img src="img/hand.gif">
-						<div class="txtCaption txtColor babel">
-							<en>
-								Hello World!
-							</en>
-							<de>
-								Hello World!
-							</de>
-						</div>
 					</div>
 	
 					<div class="txtTitle txtBlack babel">
@@ -230,43 +221,27 @@
 				</div>
 			</div>
 		
-	
+			<div style="position:absolute; width:100%; height:100%;">
+				<div class="txtHero txtWhite middled" id="hero">
+					DIGITAL ICON ZURICH
+				</div>
+			</div>
+			
 			<script language="javascript" type="text/javascript" src="land2/stairs.js"></script>
 			<script language="javascript" type="text/javascript">
 			
 	//setup doc object
+
+	var unit = 80;
+
 	var doc = {};
 	doc.width = window.innerWidth;
-	doc.height = window.innerHeight;
+	doc.height = window.innerHeight-unit;
 	doc.xCenter = doc.width/2;
 	doc.yCenter = doc.height/2;
-	doc.resolution = 120;
-	doc.scale = 1;
-	doc.svg = "on";
-	doc.svgNameSpace = "http://www.w3.org/2000/svg";
-	doc.acceleration = "on";
-	doc.lock = "vertical";
-	doc.fontSize = 5;
-	doc.debug = false;
-	doc.sound = "on";
-	doc.scene = "banana";
-	doc.act = "start";
 	
-	//adding the mother div of all mothers
-	var div = document.createElement("div");
-	div.id = "mother";
-	div.style.transform = "translate(" + doc.xCenter + "px, " + doc.yCenter + "px)";
-	div.style.userSelect = "none";
-	div.style.position = "absolute";
-	document.body.appendChild(div);
-	
-	
-	var unit = 80;
-	
-	//createDivs({shape:"rect", type:"css", y:(-unit/2), width:doc.width, height:(doc.height-unit), color:"#1f3a94", parent:"mother", id:"hero"});
-	
-	
-	document.getElementById("container").style.paddingTop = (doc.height-unit) + "px";
+	document.getElementById("hero").style.transform = "translateY(" + -unit + "px";
+	document.getElementById("container").style.paddingTop = doc.height + "px";
 	
 	
 	//size image containers
@@ -306,92 +281,68 @@
 	<script>
 	
 		var camera, scene, renderer;
-		var mesh;
-	
+		
+		var mesh = [];
+		var meshNumber = 10;
+
+		var xScale = doc.width/meshNumber;
+		var yScale = doc.height/meshNumber;
+		
+		var threeScale = 0.008;
+
 		init();
 		animate();
 	
 		function init() {
-	
-			var AMOUNT = 16;
-			var SIZE = 1 / AMOUNT;
-			var ASPECT_RATIO = window.innerWidth / window.innerHeight;
-	
-			var cameras = [];
-	
-			for ( var y = 0; y < AMOUNT; y ++ ) {
-	
-				for ( var x = 0; x < AMOUNT; x ++ ) {
-	
-					var subcamera = new THREE.PerspectiveCamera( 40, ASPECT_RATIO, 0.1, 10 );
-					subcamera.bounds = new THREE.Vector4( x / AMOUNT, y / AMOUNT, SIZE, SIZE );
-					subcamera.position.x = ( x / AMOUNT ) - 0.5;
-					subcamera.position.y = 0.5 - ( y / AMOUNT );
-					subcamera.position.z = 1.5;
-					subcamera.position.multiplyScalar( 2 );
-					subcamera.lookAt( new THREE.Vector3() );
-					subcamera.updateMatrixWorld();
-					cameras.push( subcamera );
-	
-				}
-	
-			}
-	
-			camera = new THREE.ArrayCamera( cameras );
-			camera.position.z = 3;
+						
+			camera = new THREE.PerspectiveCamera( 40, (doc.width/doc.height), 0.1, 10 );
+			camera.position.z = 10;
 	
 			scene = new THREE.Scene();
-	
-			scene.add( new THREE.DirectionalLight( 0x222244 ) );
-	
-			var light = new THREE.DirectionalLight();
-			light.position.set( 0.5, 0.5, 1 );
-			light.castShadow = true;
-			light.shadow.camera.zoom = 4; // tighter shadow map
-			scene.add( light );
-	
-			var geometry = new THREE.PlaneBufferGeometry( 100, 100 );
-			var material = new THREE.MeshBasicMaterial( { color: 0x000066 } );
-	
-			var background = new THREE.Mesh( geometry, material );
-			/*background.receiveShadow = true;*/
-			background.position.set( 0, 0, - 1 );
-			scene.add( background );
-	
-			var geometry = new THREE.CylinderBufferGeometry( 0.1, 0.1, 2.0, 32 );
-			var material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
-	
-			mesh = new THREE.Mesh( geometry, material );
-			/*mesh.castShadow = true;
-			mesh.receiveShadow = true;*/
-			scene.add( mesh );
-	
+
+			mesh = [];
+
+			for(var i = 0; i < meshNumber; i++){
+				
+				mesh[i] = [];
+
+				for(var v = 0; v < meshNumber; v++){
+				
+					var geometry = new THREE.CylinderBufferGeometry( 0.02, 0.12, 1.0, 16 );
+					var material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+					mesh[i][v] = new THREE.Mesh( geometry, material );
+					scene.add(mesh[i][v]);
+					mesh[i][v].position.x = (xScale*i - doc.xCenter+xScale/2)*threeScale;
+					mesh[i][v].position.y = (yScale*v - doc.yCenter+yScale/2)*threeScale;
+
+				}
+			}
+
 			renderer = new THREE.WebGLRenderer();
-			renderer.setPixelRatio( window.devicePixelRatio );
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			/*renderer.shadowMap.enabled = true;*/
-			document.body.appendChild( renderer.domElement );
+			renderer.setPixelRatio(window.devicePixelRatio);
+			renderer.setSize(doc.width, doc.height);
+			renderer.setClearColor( 0x003399, 1 );
+			document.body.appendChild(renderer.domElement);
 	
-			//
-	
-			window.addEventListener( 'resize', onWindowResize, false );
-	
+			window.addEventListener('resize', onWindowResize, false);
 		}
 	
 		function onWindowResize() {
 	
-			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.aspect = doc.width/doc.height;
 			camera.updateProjectionMatrix();
-	
-			renderer.setSize( window.innerWidth, window.innerHeight );
+			renderer.setSize(doc.width, doc.height);
 	
 		}
-	
+		
 		function animate() {
-	
-			mesh.rotation.x += 0.005;
-			mesh.rotation.z += 0.03;
-	
+
+			for(var i = 0; i < meshNumber; i++){
+				for(var v = 0; v < meshNumber; v++){
+					mesh[i][v].rotation.x += 0.02*(i+1);
+					mesh[i][v].rotation.z += 0.01*(v+1);
+				}
+			}
 			renderer.render( scene, camera );
 	
 			requestAnimationFrame( animate );
