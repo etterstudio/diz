@@ -3,13 +3,16 @@
 <html>
 	<head>
 		
+		<!--
+			Content and code by non-profit © Digital Arts Association 2018, Zurich
+		-->
+
 		<title>Digital Icon Zurich</title>
 		
 		<meta charset='utf-8' />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 		
 		<link rel="shortcut icon" href="global/favicon.png" type="image/x-icon" />
-		<script language="javascript" type="text/javascript" src="global/simplex-noise.min.js"></script>	
 		<link rel="stylesheet" type="text/css" href="global/style.css" />
 		
 	</head>
@@ -17,91 +20,110 @@
 	
 		<body>
 
-			<div style="position:absolute; width:100%; height:100%;">
-				<div class="txtHero txtColor middled" id="hero">
-					DIGITAL<br>ICON<br>ZURICH
+			<div id="canvas"></div>
+
+			<div style="position:absolute; width:100%; height:100%; z-index: 3;">
+				<div class="txtHero txtWhite middled" id="hero">
+					DIGITAL ICON ZURICH
 				</div>
 			</div>
 
 			<div id="container">
 				<div class="content">
 	
-					<div class="txtSmall txtBlack babel">
+					<div class="txtSmall txtWhite babel">
 						<en>
 							Digital Icon Zurich is a non-profit association with the aim to build an 
 							iconic public artwork in Zurich, reflecting the connections of data, algorithms and society.
 						</en>
 						<de>
-							Digital Icon Zurich is a non-profit association with the aim to build an iconic public artwork in Zurich, reflecting the connections of data, algorithms and society.
+							Digital Icon Zurich ist ein gemeinnütziger Verein mit dem Ziel in der Stadt Zürich ein 
+							inkonisches Kunstwerk 
+							zu realisieren, welches die Verbindungen zwischen Daten, Algorithmen und Gesellschaft reflektiert.
 						</de>
 					</div>
 
 					<a name="agenda"></a>
-	
-					<div class="txtSmall txtBlack babel" style="background-color: #ccc; padding:24px">
+					
+					<div class="txtTitle txtWhite">
+						&nbsp;
+					</div>
+
+					<div class="txtRegular txtWhite babel" style="background-color: #000; padding:24px">
 						<en>
-							Save the dates! <br>
+							Save the Dates<br>
 							&nbsp;<br>
-							Since this is a project that should benefit all the members of the community, your contribution plays a valuable and essential part in shaping the process and its outcomes. Come and join us for this exciting first step!<br>
+							Since this project should benefit all the members of the community, 
+							your contribution plays a valuable and essential part in shaping the 
+							process and its outcomes. Come and join us for this exciting first step!<br>
 							&nbsp;<br>							
 							— <br>
-							May 21, 2018 from 4 – 6 pm: Introduction, first public discussion and collection of inputs<br>
+							May XX, 2018 from 4 – 6 pm: Introduction, presentation of first research results, public discussion and collection of inputs<br>
 							— <br>
 							June 11, 2018: Second round of public discussion and inputs<br>
 							— <br>
 							July 13, 2018: Presentation of the finalised concept and next steps<br>
-							– <br>
+							— <br>
 							&nbsp;<br>
 							Open to everyone and free of charge, these get-togethers will be held at the 
-							<a href="https://muda.co/info">Museum of Digital Art</a> in Zurich around some drinks and snacks. 
+							<a href="https://muda.co/info">Museum of Digital Art</a> in Zurich around some 
+							drinks and snacks. 
 						</en>
 						<de>
-							Save the dates! <br>
+							Agenda<br>
 							&nbsp;<br>
-							Since this is a project that should benefit all the members of the community, your contribution plays a valuable and essential part in shaping the process and its outcomes. Come and join us for this exciting first step!<br>
-							&nbsp;<br>							
-							— <br>
-							May 21, 2018 from 4 – 6 pm: Introduction, first public discussion and collection of inputs<br>
-							— <br>
-							June 11, 2018: Second round of public discussion and inputs<br>
-							— <br>
-							July 13, 2018: Presentation of the finalised concept and next steps<br>
-							– <br>
+							Da dieses Projekt für alle Mitglieder der Gemeinschaft gedacht ist, würde deine Beteiligung
+							ein wichtiger und essentieller Anteil dazu beitragen, diesen Prozess und dessen Ausgang
+							mitzugestalten. Sei bei den ersten kleinen Schritten mit dabei.<br>
 							&nbsp;<br>
-							Open to everyone and free of charge, these get-togethers will be held at the 
-							<a href="https://muda.co/info">Museum of Digital Art</a> in Zurich around some drinks and snacks. 
+							— <br>
+							XX. Mai 2018, 16 bis 18 Uhr: Vorstellung, erste Ergebnisse und resultierende Fragen aus 
+							der Machbarkeitsstudie, Diskussion, Meinungssammlung<br>
+							— <br>
+							11. Juni 2018: Zweite Runde, Diskussion, Meinungssammlung<br>
+							— <br>
+							13. Juli 2018: Präsentation fertiger Studie, nächste Schritte<br>
+							— <br>
+							&nbsp;<br>
+							Diese Meetings werden für alle zugänglich und gratis im 
+							<a href="https://muda.co/info">Museum of Digital Art</a> in Zürich 
+							abgehalten, gefolgt von kleinen Snacks und Getränken (Kollekte). 
+							Anmeldung via <a href="#address">E-Mail</a> nicht obligatorisch, jedoch hilfreich. 
 						</de>
 					</div>
 	
-					<div class="txtTitle txtBlack">
+					<div class="txtRegular txtWhite">
 						&nbsp;
 					</div>
 	
-					<div class="txtTitle txtBlack babel">
+					<div class="txtTitle txtWhite babel">
 						<en>
 							Call for Projects
 						</en>
 						<de>
-							Call for Projects
+							Wettbewerb
 						</de>
 					</div>
 	
-					<div class="txtRegular txtBlack babel">
+					<div class="txtRegular txtWhite babel">
 						<en>
 							The advances in digital technologies are rapid, powerful and disruptive. 
-							They have a strong impact on all areas of our lives and increasingly change 
+							They have a strong impact on all of our lives and increasingly change 
 							how society works. A lot of these aspects and transformations are opaque 
 							and complex, carrying the risk of widening existing social gaps and inequalities. 
 							But digital technology can also be a means to produce new nodes of meaning 
 							and beauty, and be conceived as a tool for everyone to create and express themselves. 
 						</en>
 						<de>
-							The advances in digital technologies are rapid, powerful and disruptive. 
-							They have a strong impact on all areas of our lives and increasingly change 
-							how society works. A lot of these aspects and transformations are opaque 
-							and complex, carrying the risk of widening existing social gaps and inequalities. 
-							But digital technology can also be a means to produce new nodes of meaning 
-							and beauty, and be conceived as a tool for everyone to create and express themselves.
+							Die Fortschritte der digitalen Technologie sind rastlos,
+							weitreichend und unberechenbar. Sie haben einen fundamentalen Einfluss
+							auf alle Lebensbereiche, verändern unser Zusammenleben.
+							Viele Aspekte dieser Transformation sind intrasparent und komplex, 
+							könnten die Ungleichheiten der Gesellschaft weiter verstärken. 
+							Aber digitale Technologie kann auch Mittel zur Erschaffung von
+							Schönheit verstanden weden, als universelles Werkzeug um Gedanken und Gefühle 
+							auszudrücken. 
+							
 						</de>
 					</div>
 	
@@ -109,205 +131,196 @@
 						<img src="img/mfo.jpg">
 						<div class="txtCaption txtColor babel">
 							<en>
-								Zurich grounds in a strong history in making machinery. 
+								Zurich grounds on a strong history in making machinery. 
 								Ships, trains, textile machines were designed and produced in the 
 								greater Zurich area. Nowadays it is home to key tech companies from Switzerland
 								and abroad.
 							</en>
 							<de>
-								Zurich grounds in a strong history in making machinery. 
-								Ships, trains, textile machines were designed and produced in the 
-								greater Zurich area. Nowadays it is home to key tech companies from Switzerland
-								and abroad.
+								Zürich besitzt ein starkes Fundament im Ingineurentum.
+								Schiffe, Züge, Textilmaschinen wurden entworfen und produziert. 
+								Heute ist die Limmatstadt Heimat von bedeutenden nationalen und 
+								internationalen Tech-Firmen.
 							</de>
 						</div>
 					</div>
 			
-					<div class="txtRegular txtBlack babel">
+					<div class="txtRegular txtWhite babel">
 						<en>
 							Art has the strength of instigating new narratives, of revealing new levels of perception, 
 							of giving a tangible experience to the invisible facets of the digital realms. 
 							Bringing it outdoors in a setting accessible to all, and embedding it in the urban 
 							infrastructure further extends the scope and effect of its outreach. It not only becomes 
 							a public centre of interest and a source of inspiration for those seeking for it, 
-							but also provides delight and food for thought to the ones discovering them by chance. 
+							but also provides delight and food for thought to the ones discovering it by chance.<br>
+							&nbsp;<br>
+							Digital Icon Zurich is in the process of designing an international 
+							call for projects. It will ask people from all around the world to propose 
+							ideas for an iconic public artwork that has the power to open dialogue and 
+							engage the city and its citizens, to shift the notion of digital technology 
+							towards one of an enabling and creative tool for humanity. The awarded 
+							project will be materialised and become part of the city’s landscape. 
 						</en>
 						<de>
-							Art has the strength of instigating new narratives, of revealing new levels of perception, 
-							of giving a tangible experience to the invisible facets of the digital realms. 
-							Bringing it outdoors in a setting accessible to all, and embedding it in the urban 
-							infrastructure further extends the scope and effect of its outreach. It not only becomes 
-							a public centre of interest and a source of inspiration for those seeking for it, 
-							but also provides delight and food for thought to the ones discovering them by chance. 
+							Kunst hat das Potential, Sachverhalte auf anregende Weise zu erzählen, 
+							neue Ebenen der Wahrnehmung erschliessen, ohne
+							gleichzeitig belehren zu müssen. Sie kann ungeahnte Perspektiven eröffnen und 
+							die unsichtbaren Verbindungen der digitalen Welt greifbar machen. 
+							Durch die Integration in den städtischen Raum wird Kunst allen zugänglich gemacht,
+							wird zu einer kollektiven Sehenswürdigkeit und Inspirationsquelle. Nicht nur 
+							für Suchende, sondern auch für diejenigen, die davon auf dem Weg von A nach B 
+							unterbrochen werden.<br>
+							&nbsp;<br>
+							Digital Icon Zurich ist im Prozess, einen internationalen Wettberb zu formulieren.
+							Darin wird aufgefordert, Ideen für ein öffentliches Kunstwerk
+							einzureichen. Ideen mit der Kraft den Diskurs der Zivilgesellschaft 
+							und Stadt anzustossen. Ideen, welche die digitale Technologie als kreatives Werkzeug 
+							im Dienst der Humanität zu verstehen geben.
+							Das Gewinnerprojekt soll materialisiert und eine international Ikone für 
+							die Stadt Zürich werden.
 						</de>
 					</div>
 	
-					<div class="txtRegular txtBlack babel">	
-						<en>
-							Digital Icon Zurich is in the process of designing an international 
-							call for projects. It will ask people from all around the world to propose 
-							ideas for an iconic public artwork that has the power to open dialogue and 
-							engage the city and its citizens, to shift the notion of digital technology 
-							towards one of an enabling and creative tool for humanity. The awarded 
-							project will be materialised and become part of the city’s landscape. 
-						</en>
-						<de>
-							Digital Icon Zurich is in the process of designing an international 
-							call for projects. It will ask people from all around the world to propose 
-							ideas for an iconic public artwork that has the power to open dialogue and 
-							engage the city and its citizens, to shift the notion of digital technology 
-							towards one of an enabling and creative tool for humanity. The awarded 
-							project will be materialised and become part of the city’s landscape. 
-						</de>
-					</div>
-					
-					<div class="image">
-						<img src="img/bag.jpg">
-						<div class="txtCaption txtColor babel">
-							<en>
-								Unusual for tidy Zurich, one can spot on this photo the official 
-								Zurich bin liner with its iconic blue and white colors. Zurich is 
-								globally known for its visionary waste management.
-							</en>
-							<de>
-								Unusual for tidy Zurich, one can spot on this photo the official 
-								Zurich bin liner with its iconic blue and white colors. Zurich is 
-								globally known for its visionary waste management.
-							</de>
-						</div>
-					</div>
-			
-					<div class="txtTitle txtBlack babel">
-						<en>
-							How can I help?
-						</en>
-						<de>
-							How can I help?
-						</de>
-					</div>
-					
-					<div class="txtRegular txtBlack babel">
-						<en>
-							At this early stage, we’re working on how to best define and design this call-out. 
-							Scheduled in three rounds, you are all <a href="#agenda">invited</a> to act as sounding boards and to 
-							participate in the shaping and framing of this process. If you’re a bit, very or 
-							madly interested in the project, bring your ideas and experiences to one, two or 
-							all three of these think tank sessions.   
-						</en>
-						<de>
-							At this early stage, we’re working on how to best define and design this call-out. 
-							Scheduled in three rounds, you are all <a href="#agenda">invited</a> to act as sounding boards and to 
-							participate in the shaping and framing of this process. If you’re a bit, very or 
-							madly interested in the project, bring your ideas and experiences to one, two or 
-							all three of these think tank sessions.   
-						</de>
-					</div>
-
-					<div class="txtRegular txtBlack babel">
-						<en>
-							Spring is a buzzing period, and some of you might not have the time right 
-							now to partake directly in this adventure. <!--We overstand. And you won’t be left out. 
-							We’ll send the latest updates to you, curious souls longing to learn more and to 
-							you, busy bees wishing to keep tuned.--> Stay in the loop and sign up to our 
-							<a href="#address">newsletter</a> here below. 
-						</en>
-						<de>
-							Spring is a buzzing period, and some of you might not have the time right 
-							now to partake directly in this adventure. <!--We overstand. And you won’t be left out. 
-							We’ll send the latest updates to you, curious souls longing to learn more and to 
-							you, busy bees wishing to keep tuned.--> Stay in the loop and sign up to our 
-							<a href="#address">newsletter</a> here below. 
-						</de>
-					</div>
-
-					<div class="txtRegular txtBlack babel">
-						<en>
-							Others might be interested in supporting and nurturing the development of this 
-							project with a donation. 
-							Dripplets and waterfalls will all contribute in the growing of that little seed 
-							we’re planting, and make a difference. The digits of our non-profit can be 
-							found at the <a href="#address">bottom</a> of this page.
-						</en>
-						<de>
-							Others might be interested in supporting and nurturing the development of this 
-							project with a donation. 
-							Dripplets and waterfalls will all contribute in the growing of that little seed 
-							we’re planting, and make a difference. The digits of our non-profit can be 
-							found at the <a href="#address">bottom</a> of this page.
-						</de>
-					</div>
 					
 					<div class="image">
 						<img src="img/max.jpg">
 						<div class="txtCaption txtColor babel">
 							<en>
-								Zurich has always been a place for thinkers and artists. Einstein studied here, 
-								it inspired Max Bill in creating abstract art, both x-rays and the Dada 
-								movement were discovered in the city in the centre of Europe.
+								Zurich as inspiration for activitst, thinkers and artists. Such as 
+								Albert Einstein, Max Bill (picture), Alberto Giacometti, Fischli & Weiss.
 							</en>
 							<de>
-								Zurich has always been a place for thinkers and artists. Einstein studied here, 
-								it inspired Max Bill in creating abstract art, both x-rays and the Dada 
-								movement were discovered in the city in the centre of Europe.
+								Zürich als Inspirationsquelle von Aktivisten, Denkern und Künstlern.
+								Wie etwa Albert Einstein, Max Bill (Bild), Alberto Giacometti, Fischi &
+								Weiss.
 							</de>
 						</div>
 					</div>
-					
-					<div class="txtTitle txtBlack babel">
+
+					<!--
+					<div class="image">
+						<img src="img/bag.jpg">
+						<div class="txtCaption txtColor babel">
+							<en>
+								Unusual for tidy Zurich, one can spot on this photo the official 
+								Zurich bin liner with its iconic blue and white colours. Zurich is 
+								globally known for its visionary waste management.
+							</en>
+							<de>
+								Unusual for tidy Zurich, one can spot on this photo the official 
+								Zurich bin liner with its iconic blue and white colours. Zurich is 
+								globally known for its visionary waste management.
+							</de>
+						</div>
+					</div>
+					-->
+					<div class="txtTitle txtWhite babel">
 						<en>
-							Who is behind this?
+							Participation
 						</en>
 						<de>
-							Who is behind this?
+							Beteiligung
+						</de>
+					</div>
+					
+					<div class="txtRegular txtWhite babel">
+						<en>
+							At this early stage, we’re working on how to best define and design this call-out. 
+							Scheduled in three rounds, you are all <a href="#agenda">invited</a> to act as sounding boards and to 
+							participate in the shaping and framing of this process. You’re a bit, very or madly interested in the project? 
+							Bring your ideas and experiences to one, two or all three of these think tank sessions! <br>
+							&nbsp;<br>
+							Spring is a buzzing period, and some of you might not have the time right 
+							now to partake directly in this adventure. <!--We overstand. And you won’t be left out. 
+							We’ll send the latest updates to you, curious souls longing to learn more and to 
+							you, busy bees wishing to keep tuned.--> Stay in the loop and sign up to our 
+							<a href="http://eepurl.com/dttpsj">newsletter</a>.<br>
+							&nbsp;<br>
+							Others might be interested in supporting and nurturing the development of this 
+							project with a donation. 
+							Dripplets and waterfalls will all contribute in the growing of that little seed 
+							we’re planting, and make a difference. The digits of our non-profit can be 
+							found at the <a href="#address">bottom</a> of this page.
+						</en>
+						<de>
+							Zu diesem Zeitpunkt arbeiten wir daran, wie dieser Aufruf gestaltet werden soll.
+							In drei öffentlichen Diskussionsrunden sind alle Interessierten 
+							<a href="#agenda">eingeladen</a> sich an der Formung dieses Prozesses zu beteiligen. 
+							Du bist ein bisschen, sehr oder wahnsinnig an diesem Projekt interessiert?
+							Bring deine Ideen und Wissen in eine, zwei oder alle drei dieser Runden ein!<br>
+							&nbsp;<br>
+							Falls du gerne ein Teil dieses Abendeuter sein würdest, aber die Zeit gerade knapp ist,
+							dann abonniere den <a href="http://eepurl.com/dttpsj">newsletter</a> und erhalte
+							Infos über den neusten Stand direkt in deine Mailbox.<br>
+							&nbsp;<br>
+							Andere sind vielleicht daran interssiert, das Projekt mit einer Spende zu unterstützen.
+							Kleine und grosse Beträge tragen dazu bei, diese noch kleinen Planze zu nähren, die wir
+							gerade am eintopfen sind. Die Angaben dazu sind am <a href="#address">Ende</a> 
+							dieser Seit zu finden. 
+						</de>
+					</div>
+
+					
+					
+					
+					<div class="txtTitle txtWhite babel">
+						<en>
+							Initiator
+						</en>
+						<de>
+							Wer dahinter steht
 						</de>
 					</div>
 	
-					<div class="txtRegular txtBlack babel">
+					<div class="txtRegular txtWhite babel">
 						<en>
 							Digital Icon Zurich is a non-profit association based in Zurich. The project was initiated 
-							by Tom Kleiber (Enterpreneur),
-							Caroline Hirt and Christian Etter (<a href="https://muda.co">MuDA</a>) and Martin Otzenberger 
-							(<a href="https://stadt-zuerich.ch">Stadt Zürich</a>).
+							by Tom Kleiber (Digital Entrepreneur).
+							Feasability study and communication by Caroline Hirt and Christian Etter 
+							(<a href="https://muda.co">MuDA</a>), made possible thanks to the help 
+							of <a href="https://www.zh.ch/">Kanton Zürich</a>, 
+							<a href="https://stadt-zuerich.ch">Stadt Zürich</a> and private
+							supporters.
 						</en>
 						<de>
-							Digital Icon Zurich is a non-profit association based in Zurich. The project was initiated 
-							by Tom Kleiber (Enterpreneur),
-							Caroline Hirt and Christian Etter (<a href="https://muda.co">MuDA</a>) and Martin Otzenberger 
-							(<a href="https://stadt-zuerich.ch">Stadt Zürich</a>).
+							Digital Icon Zurich ist ein gemeinnütziger Verein mit Sitz in Zürich.
+							Das Projekt wurde von Tom Kleiber initiert (Digital Entrepreneur). 
+							Machbarkeitsstudie und Kommunikation von Caroline Hirt und Christian Etter (<a href="https://muda.co">MuDA</a>, 
+							ermöglicht dank der Unterstützung vom <a href="https://www.zh.ch/">Kanton Zürich</a>, 
+							und der <a href="https://stadt-zuerich.ch">Stadt Zürich</a>, sowie privaten Gönnern.
 						</de>
 					</div>
 	
 					<a name="address"></a>
 	
-					<div class="button" onclick="location.href='http://muda.us11.list-manage1.com/subscribe?u=4ea2038968ebe52d520ad27a8&id=fe04209ef8'">
+					<div class="button" onclick="location.href='http://eepurl.com/dttpsj'">
 						Newsletter
 					</div>
 	
-					<div class="txtSmall txtBlack babel">
+					<div class="txtSmall txtWhite babel">
 						<en>
 							Digital Icon Zurich<br>
 							Adresse<br>
 							8000 Zurich<br>
 							&nbsp;<br>
-							E-mail<br>
+							<a href="mailto:&#105;&#110;&#112;&#117;&#116;&#064;digitaliconzurich.ch">&#105;&#110;&#112;&#117;&#116;&#064;digitaliconzurich.ch</a><br>
 							&nbsp;<br>
 							Bank Details
 						</en>
 						<de>
 							Digital Icon Zurich<br>
 							Adresse<br>
-							8000 Zurich<br>
+							8000 Zürich<br>
 							&nbsp;<br>
-							E-mail<br>
+							<a href="mailto:&#105;&#110;&#112;&#117;&#116;&#064;digitaliconzurich.ch">&#105;&#110;&#112;&#117;&#116;&#064;digitaliconzurich.ch</a><br>
 							&nbsp;<br>
-							Bank Details
+							Bankverbindung
 						</de>
 					</div>
 	
 				</div>
 			</div>
 			
-			<script language="javascript" type="text/javascript" src="land2/stairs.js"></script>
 			<script language="javascript" type="text/javascript">
 			
 	//setup doc object
@@ -316,20 +329,20 @@
 
 	var doc = {};
 	doc.width = window.innerWidth;
-	doc.height = window.innerHeight-unit;
+	doc.height = window.innerHeight;
 	doc.xCenter = doc.width/2;
 	doc.yCenter = doc.height/2;
 	
 	//document.getElementById("hero").style.transform = "translateY(" + -unit/ + "px";
-	document.getElementById("container").style.paddingTop = doc.height + "px";
-	
+	document.getElementById("container").style.paddingTop = (doc.height-unit) + "px";
 	
 	//size image containers
-	var pictures = document.getElementsByClassName("image");
-	for (var i = 0; i < pictures.length; i++) {
-		pictures[i].style.height = pictures[i].children[0].height-1;
-	} 
-	
+	window.onload = function () {//wait for images to be loaded
+		var pictures = document.getElementsByClassName("image");
+		for (var i = 0; i < pictures.length; i++) {
+			pictures[i].style.height = pictures[i].children[0].height-1;
+		} 
+	}	
 	
 	//manage languages
 	var defaultLanguage = "EN";
@@ -352,120 +365,24 @@
 			}
 		}
 		
-	} 
+	}
+
+	var scrollFactor = 0;
+
+	window.addEventListener('scroll', function(e) {
+	
+		scrollFactor = window.scrollY;
+		//console.log("Scroll: " + scrollFactor);
+		
+	});
 	
 	</script>
-	
+
+	<script src="global/hey.js"></script>	
+	<script src="global/simplex-noise.min.js"></script>	
+
 	<script src="three.min.js"></script>
-	
-	<script>
-	
-		var camera, scene, renderer;
+	<script src="three.js"></script>	
 		
-		var mesh = [];
-		var meshNumber = 20;
-
-		var xScale = doc.width/meshNumber;
-		var yScale = doc.height/meshNumber;
-		
-		var threeScale = 0.008;
-
-		init();
-		animate();
-	
-		function init() {
-						
-			camera = new THREE.PerspectiveCamera( 40, (doc.width/doc.height), 0.1, 10 );
-			camera.position.z = 10;
-	
-			scene = new THREE.Scene();
-
-			mesh1 = [];
-
-			var geometry = new THREE.BoxGeometry(0.5, 0.03, 0.5);
-			var material = new THREE.MeshBasicMaterial( { color: 0xffffff, vertexColors: THREE.FaceColors } );
-
-			for(var i = 0; i < meshNumber; i++){
-				
-				mesh1[i] = [];
-				
-				for(var v = 0; v < meshNumber; v++){
-				
-					mesh1[i][v] = new THREE.Mesh( geometry, material );
-					scene.add(mesh1[i][v]);
-					mesh1[i][v].position.x = (xScale*i - doc.xCenter+xScale/2)*threeScale;
-					mesh1[i][v].position.y = (yScale*v - doc.yCenter+yScale/2)*threeScale;
-
-				}
-			}
-			
-			mesh2 = [];
-
-			var geometry = new THREE.CylinderBufferGeometry( 0.02, 0.12, 1.0, 16 );
-			var material = new THREE.MeshBasicMaterial( { color: 0x11006a } );
-
-			for(var i = 0; i < meshNumber; i++){
-				
-				mesh2[i] = [];
-				
-				for(var v = 0; v < meshNumber; v++){
-				
-					mesh2[i][v] = new THREE.Mesh( geometry, material );
-					scene.add(mesh2[i][v]);
-					mesh2[i][v].position.x = (xScale*i - doc.xCenter+xScale/4)*threeScale;
-					mesh2[i][v].position.y = (yScale*v - doc.yCenter+yScale/4)*threeScale;
-
-				}
-			}
-
-			renderer = new THREE.WebGLRenderer();
-			renderer.setPixelRatio(window.devicePixelRatio);
-			renderer.setSize(doc.width, doc.height);
-			renderer.setClearColor( 0x003399, 1 );
-			document.body.appendChild(renderer.domElement);
-			
-			window.addEventListener('resize', onWindowResize, false);
-		}
-	
-		function onWindowResize() {
-	
-			camera.aspect = doc.width/doc.height;
-			camera.updateProjectionMatrix();
-			renderer.setSize(doc.width, doc.height);
-	
-		}
-		
-		var lastTime;
-
-		function animate(time) {
-
-			var dt = 0;
-			if (lastTime) {
-				dt = time - lastTime;
-				if (dt > 1) dt = 0.02;
-			}
-			lastTime = time;
-
-			for(var i = 0; i < meshNumber; i++){
-				for(var v = 0; v < meshNumber; v++){
-					mesh1[i][v].rotation.x -= 0.002*(i+1);
-					mesh1[i][v].rotation.z -= 0.001*(v+1);
-
-					mesh2[i][v].rotation.x -= 0.001*(i+1);
-					mesh2[i][v].rotation.z -= 0.0005*(v+1);
-					
-
-				}
-			}
-			renderer.render( scene, camera );
-	
-			requestAnimationFrame( animate );
-	
-		}
-	
-	</script>
-	
 	</body>
 	</html>
-	
-	
