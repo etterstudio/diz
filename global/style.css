@@ -58,20 +58,19 @@ body, html {
 	transition: 0.6s;
 }
 
-.image  {
-	position:relative;
-	margin: auto;
-	max-width: 800px;
-	margin-bottom:128px;
-	background-color: #000033;
-}
-
 .middled {
 	width:100%;
 	text-align: center;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+.image  {
+	position:relative;
+	max-width: 800px;
+	margin-bottom:128px;
+	background-color: #000033;
 }
 
 .image img  {
@@ -190,6 +189,10 @@ a {
 		letter-spacing:0px;
 		font-size:15px;
 		padding:24px;
+	}
+
+	.image {
+		margin-bottom:64px;
 	}
 
 }
