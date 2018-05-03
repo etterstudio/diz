@@ -131,6 +131,7 @@ body, html {
 	transition: 0.8s;
 	display: inline-block;
 	user-select: none;
+	font-size: 20px;
     color: #000033;
     background: #00ffcc;
 }
@@ -174,8 +175,8 @@ a {
 	
 	.txtRegular {
 		letter-spacing:0px;
-		font-size:20px;
-		line-height:24px;
+		font-size:18px;
+		line-height:22px;
 		padding-bottom:64px;
 	}
 
@@ -193,6 +194,10 @@ a {
 
 	.image {
 		margin-bottom:64px;
+	}
+	
+	.button {
+		font-size:14px;
 	}
 
 }
